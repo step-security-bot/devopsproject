@@ -18,3 +18,15 @@ If execution policy is restricted, run the following on an elevated Powershell:
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 Get-ExecutionPolicy
 ```
+
+## Run application
+```
+flask run
+```
+
+Application now should be running on `http://127.0.0.1:5000/`.
+Available routes listed below:
+```
+/
+/temperature
+```
