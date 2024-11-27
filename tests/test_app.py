@@ -16,6 +16,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 # Import the Flask app instance from the main app file
 from app import app
 
+# pylint: disable=W0621
 @pytest.fixture
 def client():
     """Set up a test client for the app with setup and teardown logic."""
