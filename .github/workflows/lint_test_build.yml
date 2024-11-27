@@ -31,3 +31,5 @@ jobs:
         dockerfile: Dockerfile
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag devopsproject:$(date +%s)
+    - name: Run tests inside the container
+      run: docker run devopsproject run pytest
