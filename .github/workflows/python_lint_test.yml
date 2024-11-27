@@ -25,3 +25,7 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+    - name: Run Hadolint on Dockerfile
+    - uses: hadolint/hadolint-action@v3.1.0
+      with:
+        dockerfile: Dockerfile
