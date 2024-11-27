@@ -12,6 +12,7 @@ import pytest
 # Add the parent directory to sys.path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+# pylint: disable=C0413
 # Import the Flask app instance from the main app file
 from app import app
 
