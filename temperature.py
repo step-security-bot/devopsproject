@@ -22,7 +22,7 @@ def avg_temperature(boxes):
 
         # sending get request and saving the response as response object
         try:
-            r = requests.get(url, timeout=10)
+            r = requests.get(url, timeout=30)
         except requests.exceptions.Timeout:
             logging.error("timeout raised")
 
