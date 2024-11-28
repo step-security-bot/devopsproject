@@ -24,7 +24,7 @@ jobs:
         pylint $(git ls-files '*.py')
     - name: Test with pytest
       run: |
-        pytest
+        pytest -vs
     - name: Run Hadolint on Dockerfile
       uses: hadolint/hadolint-action@v3.1.0
       with:
@@ -32,4 +32,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag devopsproject
     - name: Run tests inside the container
-      run: docker run devopsproject pytest
+      run: docker run devopsproject pytest -vs
