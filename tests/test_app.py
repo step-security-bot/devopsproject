@@ -30,13 +30,16 @@ def test_home(client):
     response = client.get('/')
     assert response.status_code == 200
     assert response.json == {"version": "v0.0.1"}
+    print(response.json)
 
-def test_about(client):
+def test_temperature(client):
     """Test the temperature route."""
     response = client.get('/temperature')
     assert response.status_code == 200
+    print(response.json)
 
 def test_non_existent_route(client):
     """Test for a non-existent route."""
     response = client.get('/non-existent')
     assert response.status_code == 404
+    print(response.json)
