@@ -29,7 +29,10 @@ jobs:
       uses: hadolint/hadolint-action@v3.1.0
       with:
         dockerfile: Dockerfile
+    - name: OSSF Scorecard action
+      uses: ossf/scorecard-action@v2.4.0
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag devopsproject
     - name: Run tests inside the container
       run: docker run devopsproject pytest -vs
+      
