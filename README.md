@@ -1,5 +1,7 @@
 # WIP
 
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/ngonsoto/devopsproject/badge)](https://scorecard.dev/viewer/?uri=github.com/ngonsoto/devopsproject)
+
 ## Build and run the docker image
 ```
 docker build -t <my-container> .
